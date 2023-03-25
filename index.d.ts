@@ -7,9 +7,12 @@ interface RollupModifyOptions {
     | RollupModifyOptions['find']
     | RollupModifyOptions['replace']
     | RollupModifyOptions['sourcemap']
+    | RollupModifyOptions['exclude']
   find: string | RegExp
   replace: string | ReplaceFunction
   sourcemap?: boolean
+  include?: string | string[]
+  exclude?: string | string[]
 }
 
 export default function modify(options: RollupModifyOptions): Plugin

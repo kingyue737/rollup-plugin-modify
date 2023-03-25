@@ -1,10 +1,14 @@
 const MagicString = require('magic-string')
+const RollupPluginUtils = require('@rollup/pluginutils')
 
+const { createFilter } = RollupPluginUtils
 const escapeRegExp = x => x.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
 
 module.exports = function modify({
   find,
   replace,
+  include,
+  exclude,
   sourcemap = true,
   ...rest
 }) {
@@ -14,10 +18,13 @@ module.exports = function modify({
       parseFind(find),
       replace
     ])
+  const filter = createFilter(include, exclude);
 
   return {
     name: 'modify',
     transform: (source, id) => {
+      if (!filter(id)) return null
+
       if (modifiers.every(x => !x[0].test(source)))
         return
 
