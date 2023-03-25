@@ -1,6 +1,6 @@
 {
-  "name": "rollup-plugin-modify",
-  "version": "3.0.0",
+  "name": "@kingyue/rollup-plugin-modify",
+  "version": "4.0.0",
   "description": "Modify rollup output with find / replace dynamically",
   "main": "index.js",
   "types": "index.d.ts",
