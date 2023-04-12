@@ -1,6 +1,6 @@
 {
   "name": "@kingyue/rollup-plugin-modify",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Modify rollup output with find / replace dynamically",
   "main": "index.js",
   "types": "index.d.ts",
@@ -19,8 +19,8 @@
     "transform"
   ],
   "license": "WTFPL",
-  "author": "Rasmus Porsager <rasmus@porsager.com>",
-  "repository": "porsager/rollup-plugin-modify",
+  "author": "Yue JIN <yuejin13@fudan.edu.cn>",
+  "repository": "kingyue737/rollup-plugin-modify",
   "dependencies": {
     "@rollup/pluginutils": "^5.0.2",
     "magic-string": "^0.30.0"
