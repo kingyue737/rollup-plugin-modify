@@ -22,6 +22,7 @@ module.exports = function modify({
 
   return {
     name: 'modify',
+    enforce: "pre",
     transform: (source, id) => {
       if (!filter(id)) return null
 
