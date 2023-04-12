@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/npm/v/rollup-plugin-modify.svg)]()  [![license](https://img.shields.io/github/license/porsager/rollup-plugin-modify.svg)]()
+[![version](https://img.shields.io/npm/v/@kingyue/rollup-plugin-modify.svg)]() [![license](https://img.shields.io/github/license/porsager/rollup-plugin-modify.svg)]()
 
 # 🔎 `rollup-plugin-modify`
 
@@ -7,25 +7,27 @@ Modify rollup output with find / replace dynamically.
 ## Usage
 
 ```bash
-npm i rollup-plugin-modify
+pnpm add rollup-plugin-modify -D
 ```
 
 Explicit single using find, replace keys
+
 ```js
-import modify from 'rollup-plugin-modify'
+import modify from "rollup-plugin-modify"
 
 export default {
   plugins: [
     modify({
       find: String | RegExp,
-      replace: String | Function
-    })
-  ]
+      replace: String | Function,
+    }),
+  ],
 }
 ```
 
 Terse multiple using key, value
-```
+
+```js
 import modify from 'rollup-plugin-modify'
 
 export default {
@@ -50,8 +52,8 @@ Supply a string to directly replace what you've found, or a function to dynamica
 
 ```js
 modify({
-  find: 'eval',
-  replace: 'lava'
+  find: "eval",
+  replace: "lava",
 })
 ```
 
@@ -60,7 +62,6 @@ modify({
 ```js
 modify({
   find: /svg\((.*?)\)/,
-  replace: (match, path) => JSON.stringify(fs.readFileSync(path, 'utf8'))
+  replace: (match, path) => JSON.stringify(fs.readFileSync(path, "utf8")),
 })
 ```
-
