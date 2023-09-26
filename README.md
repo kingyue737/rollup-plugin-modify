@@ -7,13 +7,13 @@ Modify rollup output with find / replace dynamically.
 ## Usage
 
 ```bash
-pnpm add rollup-plugin-modify -D
+pnpm add @kingyue/rollup-plugin-modify -D
 ```
 
 Explicit single using find, replace keys
 
 ```js
-import modify from "rollup-plugin-modify"
+import modify from "@kingyue/rollup-plugin-modify";
 
 export default {
   plugins: [
@@ -22,22 +22,22 @@ export default {
       replace: String | Function,
     }),
   ],
-}
+};
 ```
 
 Terse multiple using key, value
 
 ```js
-import modify from 'rollup-plugin-modify'
+import modify from "rollup-plugin-modify";
 
 export default {
   plugins: [
     modify({
-      'find this text': 'replace with this here',
-      'process.env.PORT': 5000
-    })
-  ]
-}
+      "find this text": "replace with this here",
+      "process.env.PORT": 5000,
+    }),
+  ],
+};
 ```
 
 ### `find: String|RegExp`
@@ -54,7 +54,7 @@ Supply a string to directly replace what you've found, or a function to dynamica
 modify({
   find: "eval",
   replace: "lava",
-})
+});
 ```
 
 #### Example using RegExp for find and a Function for replace
@@ -63,5 +63,5 @@ modify({
 modify({
   find: /svg\((.*?)\)/,
   replace: (match, path) => JSON.stringify(fs.readFileSync(path, "utf8")),
-})
+});
 ```
