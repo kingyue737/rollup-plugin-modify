@@ -38,7 +38,7 @@ const regexPlugin: (options: RollupRegexpOptions) => Plugin = function ({
   const filter = createFilter(include, exclude)
 
   return {
-    name: 'modify',
+    name: 'regexp',
     enforce: 'pre',
     transform: (source, id) => {
       if (!filter(id)) return null

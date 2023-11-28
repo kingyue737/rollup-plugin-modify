@@ -40,7 +40,7 @@
   ],
   "license": "MIT",
   "author": "Yue JIN <yuejin13@fudan.edu.cn>, Rasmus Porsager <rasmus@porsager.com>",
-  "repository": "kingyue737/rollup-plugin-modify",
+  "repository": "kingyue737/rollup-plugin-regexp",
   "dependencies": {
     "@rollup/pluginutils": "^5.0.5",
     "magic-string": "^0.30.5"
