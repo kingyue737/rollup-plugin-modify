@@ -3,10 +3,29 @@
   "version": "5.0.0",
   "type": "module",
   "description": "Modify rollup output with find / replace dynamically",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.cjs",
+        "types": "./dist/index.d.cts"
+      }
+    },
+    "./*": "./*"
+  },
   "scripts": {
-    "test": "ospec test"
+    "test": "vitest",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "prepublishOnly": "pnpm run build"
   },
   "keywords": [
     "rollup-plugin",
@@ -20,14 +39,13 @@
     "transform"
   ],
   "license": "MIT",
-  "author": "Yue JIN <yuejin13@fudan.edu.cn>",
+  "author": "Yue JIN <yuejin13@fudan.edu.cn>, Rasmus Porsager <rasmus@porsager.com>",
   "repository": "kingyue737/rollup-plugin-modify",
   "dependencies": {
     "@rollup/pluginutils": "^5.0.5",
     "magic-string": "^0.30.5"
   },
   "devDependencies": {
-    "ospec": "4.2.0",
     "rollup": "^4.6.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.2",

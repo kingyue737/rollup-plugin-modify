@@ -10,8 +10,8 @@ interface RollupModifyOptions {
     | RollupModifyOptions['replace']
     | RollupModifyOptions['sourcemap']
     | RollupModifyOptions['exclude']
-  find: string | RegExp
-  replace: string | ReplaceFunction
+  find?: string | RegExp
+  replace?: string | ReplaceFunction
   sourcemap?: boolean
   include?: string | string[]
   exclude?: string | string[]
@@ -55,7 +55,7 @@ const regexPlugin: (options: RollupModifyOptions) => Plugin = function ({
             match.index,
             match.index + match[0].length,
             typeof replace === 'function'
-              ? replace.apply(null, match)
+              ? replace.apply(null, match as any)
               : String(replace)
           )
         }
