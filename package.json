@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-regexp",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "type": "module",
   "description": "Modify rollup output with find / replace dynamically",
   "main": "dist/index.cjs",

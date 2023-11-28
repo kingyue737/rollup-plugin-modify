@@ -4,12 +4,12 @@ import type { Plugin } from 'rollup'
 
 type ReplaceFunction = (match: string, path: string) => string
 
-interface RollupModifyOptions {
+interface RollupRegexpOptions {
   [key: string]:
-    | RollupModifyOptions['find']
-    | RollupModifyOptions['replace']
-    | RollupModifyOptions['sourcemap']
-    | RollupModifyOptions['exclude']
+    | RollupRegexpOptions['find']
+    | RollupRegexpOptions['replace']
+    | RollupRegexpOptions['sourcemap']
+    | RollupRegexpOptions['exclude']
   find?: string | RegExp
   replace?: string | ReplaceFunction
   sourcemap?: boolean
@@ -19,7 +19,7 @@ interface RollupModifyOptions {
 
 const escapeRegExp = (x: string) => x.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
 
-const regexPlugin: (options: RollupModifyOptions) => Plugin = function ({
+const regexPlugin: (options: RollupRegexpOptions) => Plugin = function ({
   find,
   replace,
   include,
