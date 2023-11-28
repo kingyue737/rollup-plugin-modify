@@ -1,6 +1,7 @@
 {
-  "name": "@kingyue/rollup-plugin-modify",
-  "version": "4.1.0",
+  "name": "rollup-plugin-regexp",
+  "version": "5.0.0",
+  "type": "module",
   "description": "Modify rollup output with find / replace dynamically",
   "main": "index.js",
   "types": "index.d.ts",
@@ -18,15 +19,18 @@
     "magic-string",
     "transform"
   ],
-  "license": "WTFPL",
+  "license": "MIT",
   "author": "Yue JIN <yuejin13@fudan.edu.cn>",
   "repository": "kingyue737/rollup-plugin-modify",
   "dependencies": {
-    "@rollup/pluginutils": "^5.0.2",
-    "magic-string": "^0.30.0"
+    "@rollup/pluginutils": "^5.0.5",
+    "magic-string": "^0.30.5"
   },
   "devDependencies": {
-    "ospec": "3.1.0",
-    "rollup": "^3.20.2"
+    "ospec": "4.2.0",
+    "rollup": "^4.6.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2",
+    "vitest": "^0.34.6"
   }
 }
