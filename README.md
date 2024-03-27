@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/npm/v/rollup-plugin-regexp.svg)]() [![license](https://img.shields.io/github/license/kingyue737/rollup-plugin-regexp.svg)]()
+[![version](https://img.shields.io/npm/v/rollup-plugin-regexp.svg)](https://www.npmjs.com/package/rollup-plugin-regexp) [![license](https://img.shields.io/github/license/kingyue737/rollup-plugin-regexp.svg)](https://github.com/kingyue737/rollup-plugin-regexp/blob/main/LICENSE)
 
 # 🔎 `rollup-plugin-regexp`
 
