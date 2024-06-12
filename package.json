@@ -42,13 +42,13 @@
   "author": "Yue JIN <yuejin13@fudan.edu.cn>, Rasmus Porsager <rasmus@porsager.com>",
   "repository": "kingyue737/rollup-plugin-regexp",
   "dependencies": {
-    "@rollup/pluginutils": "^5.0.5",
-    "magic-string": "^0.30.5"
+    "@rollup/pluginutils": "^5.1.0",
+    "magic-string": "^0.30.10"
   },
   "devDependencies": {
-    "rollup": "^4.6.0",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.2",
-    "vitest": "^0.34.6"
+    "rollup": "^4.18.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
